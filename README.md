@@ -49,7 +49,7 @@ Quran Mood Matcher was built during a hackathon using **HTML**, **CSS**, and **J
 
 ---
 
-📸 Screenshots 
+📸 ![screenshot](screenshot.png)
 
 ---
 
@@ -83,5 +83,3 @@ May Allah reward every contributor and every user.
 
 © 2025 – Quran Mood Matcher**
 Built with faith, purpose, and code.
-
-Just tell me!
