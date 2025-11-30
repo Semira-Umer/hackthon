@@ -5,6 +5,9 @@ Finding Peace Through the Words of Allah
 A spiritual wellness web application that connects your emotions with relevant **Quranic verses** and **Hadith**, helping you find comfort, understanding, and guidance during any emotional moment.
 
 ---
+⭐️ Preview
+
+📸 ![screenshot](Screenshot.png)
 
  🖼️ Project Banner
 
@@ -46,10 +49,6 @@ Quran Mood Matcher was built during a hackathon using **HTML**, **CSS**, and **J
 | **Liya Mehamed**  | CSS & JavaScript Developer | Builds responsive layouts & dynamic UI features.  |
 | **Hanan Asmare**  | CSS & JavaScript Developer | Creates user-friendly and interactive components. |
 | **Zahara Sultan** | CSS & JavaScript Developer | Enhances usability with modern CSS & JS.          |
-
----
-
-📸 ![screenshot](screenshot.png)
 
 ---
 
