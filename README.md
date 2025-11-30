@@ -128,5 +128,6 @@ This project strengthened both our technical capabilities and our connection to 
 May this project become a source of comfort, clarity, and healing for anyone who uses it.
 May Allah reward every contributor and every user.
 
-© 2025 – Quran Mood Matcher**
+© 2025 – Quran Mood Matcher
+
 Built with faith, purpose, and code.
