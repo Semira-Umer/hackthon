@@ -75,6 +75,54 @@ quran-mood-matcher/
 * Mobile app version
 
 ---
+🎓 What We Learned
+
+Throughout building Quran Mood Matcher, our team gained valuable technical and collaborative experience:
+
+💻 Technical Skills
+
+How to structure a complete multi-page project using semantically correct HTML
+
+Designing modern, responsive layouts using advanced CSS (Grid, Flexbox, animations)
+
+Implementing dynamic features using JavaScript, including:
+
+DOM manipulation
+
+event-driven actions
+
+rendering verses based on selected emotions
+
+Understanding how to organize files into modular folders (assets, styles, scripts)
+
+Integrating audio recitation in a clean, optimized way
+
+🤝 Teamwork & Collaboration
+
+Dividing tasks efficiently based on team strengths
+
+Maintaining consistent design across pages with shared styles
+
+Working under hackathon pressure while keeping quality high
+
+Communicating ideas clearly and merging different coding styles
+
+🎨 Design Skills
+
+Creating a calming, spiritual user experience
+
+Choosing readable fonts, proper spacing, and elegant color themes
+
+🌙 Islamic Knowledge
+
+Discovering Quranic verses and Hadith related to emotions
+
+Understanding how Islamic teachings guide emotional wellness
+
+Appreciating how technology can support spiritual growth
+
+This project strengthened both our technical capabilities and our connection to the Quran.
+
  🤲 Final Message
 
 May this project become a source of comfort, clarity, and healing for anyone who uses it.
