@@ -31,14 +31,9 @@ body {
         radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.03) 0%, transparent 50%),
         linear-gradient(135deg, #f8fff8 0%, #e8f5e8 100%);
     color: var(--text-dark);
-    min-height: 100ph;
+    min-height: 100vh;
     background-attachment: fixed;
     overflow-x: hidden;
-    
-   
-    
-    
-    
 }
 
 /* Loading Animation */
@@ -123,7 +118,7 @@ body {
 .header::before {
     content: "";
     position: absolute;
-    width:100%;
+    width: 100%;
     top: 0;
     left: 0;
     right: 0;
@@ -143,8 +138,7 @@ body {
     align-items: center;
     margin-top: 20px;
     animation: fadeInUp 0.8s ease-out 0.2s both;
-    
-}
+   }
 
 .logo {
     color: var(--white);
@@ -275,11 +269,7 @@ body {
     box-shadow: var(--shadow);
     overflow: hidden;
     animation: fadeIn 1s ease-out 0.5s both;
-    position: relative;
     padding-top: 100px; 
-    
-   
-    
     
 }
 
@@ -391,9 +381,7 @@ body {
     left: 0;
     right: 0;
     height: 4px;
-
-
-background: var(--primary-green);
+    background: var(--primary-green);
     transform: scaleX(0);
     transition: transform 0.3s ease;
 }
@@ -404,7 +392,7 @@ background: var(--primary-green);
 
 .mood-card:hover {
     transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 20px 40px transparent;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 .mood-icon {
@@ -591,9 +579,7 @@ background: var(--primary-green);
     padding: 1.5rem 2rem;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 15px;
-
-
-font-style: italic;
+    font-style: italic;
     border-left: 4px solid var(--gold);
 }
 
@@ -640,5 +626,183 @@ font-style: italic;
     border-radius: 15px;
     border-right: 4px solid var(--gold);
 }
+/* About Page */
+.about-page {
+    display: none;
+    padding: 2rem;
+}
 
-/* A
+.about-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.about-icon {
+    font-size: 3rem;
+    color: var(--primary-green);
+    margin-top: 1rem;
+}
+
+/* Team Section */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.team-member {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+/* Team Member Styles */
+.member-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid var(--primary-green);
+}
+
+.member-info {
+    text-align: center;
+}
+
+.member-name {
+    color: var(--primary-green);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.member-role {
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.member-bio {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+/* RTL Support for Arabic */
+.arabic .ayah-arabic {
+    text-align: left;
+}
+
+.arabic .ayah-header {
+    flex-direction: row-reverse;
+}
+
+.arabic .ayah-translation {
+    text-align: right;
+    direction: rtl;
+}
+
+.arabic .hadith-text {
+    text-align: right;
+    direction: rtl;
+}
+
+.arabic .mood-card h3,
+.arabic .mood-card p {
+    text-align: center;
+}
+/* Footer */
+footer {
+    background: var(--dark-green);
+    color: var(--white);
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+@keyframes slideDown {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+    from { 
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes cardAppear {
+    from { 
+        opacity: 0;
+        transform: translateY(20px) scale(0.9);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+@keyframes slideInLeft {
+    from { 
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes slideInRight {
+    from { 
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
