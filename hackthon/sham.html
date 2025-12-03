@@ -41,12 +41,11 @@
                 </div>
                 <div class="language-selector">
                     <i class="fas fa-globe"></i>
-                    <select id="language-select">
-                        
-                        <option value="en">language</option>
-                        <option value="en">English</option>
-                        <option value="ar">العربية</option>
-                    </select>
+                 <select id="language-select">
+    <option value="" disabled selected>Select Language</option>
+    <option value="en">English</option>
+    <option value="ar">العربية</option>
+</select>
                 </div>
             </div>
         </div>
@@ -93,7 +92,7 @@
                     </div>
                     <h3 id="sad-title">Sad</h3>
                     <p id="sad-desc">Feeling down or distressed</p>
-                    <div class="mood-overlay"Style="background-color: #C1CDC1;">
+                    <div class="mood-overlay" style="background-color: #C1CDC1;">
                         <span>Find Comfort</span>
                     </div>
                 </div>
@@ -103,7 +102,7 @@
                     </div>
                     <h3 id="anxious-title">Anxious</h3>
                     <p id="anxious-desc">Worried or nervous</p>
-                    <div class="mood-overlay"Style="background-color: #B6D0E2;">
+                    <div class="mood-overlay" style="background-color: #B6D0E2;">
                         <span>Find Peace</span>
                     </div>
                 </div>
@@ -113,7 +112,7 @@
                     </div>
                     <h3 id="happy-title">Happy</h3>
                     <p id="happy-desc">Feeling joyful and grateful</p>
-                    <div class="mood-overlay"Style="background-color: #748A6F;">
+                    <div class="mood-overlay" style="background-color: #748A6F;">
                         <span>Express Gratitude</span>
                     </div>
                 </div>
@@ -123,7 +122,7 @@
                     </div>
                     <h3 id="angry-title">Angry</h3>
                     <p id="angry-desc">Feeling upset or frustrated</p>
-                    <div class="mood-overlay"Style="background-color: #A5C9B3;">
+                    <div class="mood-overlay" style="background-color: #A5C9B3;">
                         <span>Find Patience</span>
                     </div>
                 </div>
@@ -133,7 +132,7 @@
                     </div>
                     <h3 id="grateful-title">Grateful</h3>
                     <p id="grateful-desc">Feeling thankful to Allah</p>
-                    <div class="mood-overlay"Style="background-color: #D8C6A5;">
+                    <div class="mood-overlay" style="background-color: #D8C6A5;">
                         <span>Give Thanks</span>
                     </div>
                 </div>
@@ -141,10 +140,10 @@
         </div>
 
         <!-- Mood Pages -->
-        <div class="mood-page" id="sad-page">
+        <div class="mood-page" id="sad-page" style="display:none;">
             <button class="back-button" onclick="goBack()">
                 <i class="fas fa-arrow-left"></i>
-                <span id="back-text">Back to Home</span>
+                <span class="back-text">Back to Home</span>
             </button>
             
             <div class="mood-content">
@@ -165,11 +164,11 @@
                             <i class="fas fa-star"></i>
                             <span>Surah Fatir (35:34)</span>
                         </div>
-                        <div class="ayah-translation" id="sad-translation">
+                        <div  id="sad-translation" class="ayah-translation sad-translation">
                             "And they will say, 'Praise to Allah, who has removed from us [all] sorrow. Indeed, our Lord is Forgiving and Appreciative.'"
                         </div>
                         <div class="ayah-description">
-                            <p id="sad-description">This verse from Surah Fatir (35:34) reminds us that Allah will remove all sorrow from the believers in Paradise. It gives hope that our sadness in this world is temporary and that Allah's mercy is vast.</p>
+                            <p id="sad-description" class="sad-description">This verse from Surah Fatir (35:34) reminds us that Allah will remove all sorrow from the believers in Paradise. It gives hope that our sadness in this world is temporary and that Allah's mercy is vast.</p>
                         </div>
                         
                     </div>
@@ -193,9 +192,9 @@
                             <i class="fas fa-star"></i>
                             <span>Surah Az-Zumar (39:53)</span>
                         </div>
-                        <div class="ayah-translation" id="sad-translation">
-                            "Say, "O My servants who have transgressed against themselves [by sinning], do not despair of the mercy of Allah. Indeed, Allah forgives all sins. Indeed, it is He who is the Forgiving, the Merciful." 
-                        </div>
+                        <div id="sad-translation2" class="ayah-translation sad-translation">
+                            "Say, 'O My servants who have transgressed against themselves [by sinning], do not despair of the mercy of Allah. Indeed, Allah forgives all sins. Indeed, it is He who is the Forgiving, the Merciful.'" 
+       </div>
                        
                     </div>
                     
@@ -203,8 +202,8 @@
                 </div>
                 
                 <div class="hadith-section">
-                    <h3><i class="fas fa-book"></i> <span id="hadith-title">Related Hadith</span></h3>
-                    <div class="hadith-text" id="sad-hadith">
+                    <h3><i class="fas fa-book"></i> <span class="hadith-title">Related Hadith</span></h3>
+                    <div id="sad-hadith" class="hadith-text sad-hadith">
                         "How wonderful is the affair of the believer, for his affairs are all good, and this applies to no one but the believer. If something good happens to him, he is thankful for it and that is good for him. If something bad happens to him, he bears it with patience and that is good for him." (Muslim) 
                     </div>
                     
@@ -212,10 +211,10 @@
             </div>
         </div>
 
-        <div class="mood-page" id="anxious-page">
+        <div class="mood-page" id="anxious-page" style="display:none;">
             <button class="back-button" onclick="goBack()">
                 <i class="fas fa-arrow-left"></i>
-                <span id="back-text">Back to Home</span>
+                <span class="back-text">Back to Home</span>
             </button>
             
             <div class="mood-content">
@@ -234,11 +233,11 @@
                             <i class="fas fa-star"></i>
                             <span>Surah Ar-Ra'd (13:28)</span>
                         </div>
-                        <div class="ayah-translation" id="anxious-translation">
+                        <div id="anxious-translation" class="ayah-translation anxious-translation">
                             "Unquestionably, by the remembrance of Allah hearts are assured."
                         </div>
                         <div class="ayah-description">
-                            <p id="anxious-description">This powerful verse from Surah Ar-Ra'd (13:28) teaches us that true peace and tranquility comes from remembering Allah. When we feel anxious, turning to dhikr (remembrance of Allah) can calm our hearts.</p>
+                            <p   id="anxious-description" class="anxious-description">This powerful verse from Surah Ar-Ra'd (13:28) teaches us that true peace and tranquility comes from remembering Allah. When we feel anxious, turning to dhikr (remembrance of Allah) can calm our hearts.</p>
                         </div>
                     </div>
                     
@@ -247,17 +246,17 @@
                 
                 <div class="hadith-section">
                     <h3><i class="fas fa-book"></i> <span id="hadith-title">Related Hadith</span></h3>
-                    <div class="hadith-text" id="anxious-hadith">
+                    <div id="anxious-hadith" class="hadith-text anxious-hadith">
                         "No fatigue, nor disease, nor sorrow, nor sadness, nor hurt, nor distress befalls a Muslim, even if it were the prick he receives from a thorn, but that Allah expiates some of his sins for that." (Bukhari)
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="mood-page" id="happy-page">
+        <div class="mood-page" id="happy-page" style="display:none;">
             <button class="back-button" onclick="goBack()">
                 <i class="fas fa-arrow-left"></i>
-                <span id="back-text">Back to Home</span>
+                <span class="back-text">Back to Home</span>
             </button>
 
 
@@ -277,28 +276,28 @@
                             <i class="fas fa-star"></i>
                             <span>Surah Yunus (10:58)</span>
                         </div>
-                        <div class="ayah-translation" id="happy-translation">
+                        <div id="happy-translation" class="ayah-translation happy-translation">
                             "Say, 'In the bounty of Allah and in His mercy - in that let them rejoice; it is better than what they accumulate.'"
                         </div>
                         <div class="ayah-description">
-                            <p id="happy-description">This verse from Surah Yunus (10:58) teaches us that true happiness comes from recognizing and appreciating Allah's blessings and mercy, which are far more valuable than any worldly possessions.</p>
+                            <p  id="happy-description" class="happy-description">This verse from Surah Yunus (10:58) teaches us that true happiness comes from recognizing and appreciating Allah's blessings and mercy, which are far more valuable than any worldly possessions.</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="hadith-section">
-                    <h3><i class="fas fa-book"></i> <span id="hadith-title">Related Hadith</span></h3>
-                    <div class="hadith-text" id="happy-hadith">
+                    <h3><i class="fas fa-book"></i> <span class="hadith-title">Related Hadith</span></h3>
+                    <div  id="happy-hadith" class="hadith-text happy-hadith">
                         "If you are grateful, I will surely increase you [in favor]; but if you deny, indeed, My punishment is severe." (Quran 14:7)
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="mood-page" id="angry-page">
+        <div class="mood-page" id="angry-page" style="display:none;">
             <button class="back-button" onclick="goBack()">
                 <i class="fas fa-arrow-left"></i>
-                <span id="back-text">Back to Home</span>
+                <span class="back-text">Back to Home</span>
             </button>
             
             <div class="mood-content">
@@ -317,18 +316,18 @@
                             <i class="fas fa-star"></i>
                             <span>Surah Ali 'Imran (3:134)</span>
                         </div>
-                        <div class="ayah-translation" id="angry-translation">
+                        <div id="angry-translation" class="ayah-translation angry-translation">
                             "And those who restrain anger and who pardon the people - and Allah loves the doers of good."
                         </div>
                         <div class="ayah-description">
-                            <p id="angry-description">This verse from Surah Ali 'Imran (3:134) highlights the virtue of controlling anger and forgiving others. It reminds us that suppressing anger and showing forgiveness are qualities loved by Allah.</p>
+                            <p id="angry-description" class="angry-description">This verse from Surah Ali 'Imran (3:134) highlights the virtue of controlling anger and forgiving others. It reminds us that suppressing anger and showing forgiveness are qualities loved by Allah.</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="hadith-section">
-                    <h3><i class="fas fa-book"></i> <span id="hadith-title">Related Hadith</span></h3>
-                    <div class="hadith-text" id="angry-hadith">
+                    <h3><i class="fas fa-book"></i> <span class="hadith-title">Related Hadith</span></h3>
+                    <div id="angry-hadith" class="hadith-text angry-hadith">
                         "The strong is not the one who overcomes the people by his strength, but the strong is the one who controls himself while in anger." (Bukhari)
 
 
@@ -337,10 +336,10 @@
             </div>
         </div>
 
-        <div class="mood-page" id="grateful-page">
+        <div class="mood-page" id="grateful-page" style="display:none;">
             <button class="back-button" onclick="goBack()">
                 <i class="fas fa-arrow-left"></i>
-                <span id="back-text">Back to Home</span>
+                <span class="back-text">Back to Home</span>
             </button>
             
             <div class="mood-content">
@@ -359,11 +358,11 @@
                             <i class="fas fa-star"></i>
                             <span>Surah An-Nahl (16:18)</span>
                         </div>
-                        <div class="ayah-translation" id="grateful-translation">
+                        <div id="grateful-translation" class= "ayah-translation grateful-translation">
                             "And if you should count the favors of Allah, you could not enumerate them. Indeed, Allah is Forgiving and Merciful."
                         </div>
                         <div class="ayah-description">
-                            <p id="grateful-description">This verse from Surah An-Nahl (16:18) reminds us of the countless blessings Allah has bestowed upon us, encouraging gratitude and recognition of His endless mercy.</p>
+                            <p id="grateful-description" class="grateful-description">This verse from Surah An-Nahl (16:18) reminds us of the countless blessings Allah has bestowed upon us, encouraging gratitude and recognition of His endless mercy.</p>
                         </div>
                     </div>
                 </div>
@@ -382,7 +381,7 @@
                             <i class="fas fa-star"></i>
                             <span>Surah Ibrahim (14:7)</span>
                         </div>
-                        <div class="ayah-translation" id="grateful-translation">
+                        <div id="grateful-translation2" class="ayah-translation grateful-translation">
                             "And remember! your Lord caused to be declared (publicly): 'If ye are grateful, I will add more (favours) unto you; But if ye show ingratitude, truly My punishment is terrible indeed."
                         </div>
                         
@@ -390,8 +389,8 @@
                 </div>
                 
                 <div class="hadith-section">
-                    <h3><i class="fas fa-book"></i> <span id="hadith-title">Related Hadith</span></h3>
-                    <div class="hadith-text" id="grateful-hadith">
+                    <h3><i class="fas fa-book"></i> <span class="hadith-title">Related Hadith</span></h3>
+                    <div  id="grateful-hadith" class="hadith-text grateful-hadith">
                         "He who does not thank people, does not thank Allah." (Abu Dawud)
                     </div>
                 </div>
@@ -399,17 +398,17 @@
         </div>
 
         <!-- About Page -->
-        <div class="about-page" id="about-page">
+        <div class="about-page" id="about-page" style="display:none;">
             <button class="back-button" onclick="goBack()">
                 <i class="fas fa-arrow-left"></i>
-                <span id="back-text">Back to Home</span>
+                <span id="back-text" class="back-text">Back to Home</span>
             </button>
             
             <div class="about-content">
                 <div class="about-header">
                     <h2 id="about-title">About Quran Mood Matcher</h2>
                     <div class="about-icon">
-                        <i class="fas quran-icon">﷽</i>
+                        <span class="quran-icon">﷽</span>
                     </div>
                 </div>
                 
@@ -430,7 +429,7 @@
                     </div>    
                         <div class="container">
         <div class="page-title">
-            <h1>Our Team</h1>
+            <h1>Our Team: Muslimah Coders</h1>
             <p>Meet the talented individuals behind our hackathon project</p>
         </div>
         
@@ -449,8 +448,6 @@
         </div>
     </div>
 
-    <!-- Footer -->
-    <!-- Footer -->
 <footer>
     <div class="footer-content">
         <div class="footer-left">
@@ -460,7 +457,7 @@
             </div>
             <p class="footer-text">Finding Peace Through Quran &copy; 2025</p>
         </div>
-        
+   
         <div class="footer-right">
             <div class="footer-verse">
                 <p>"And We send down of the Quran that which is healing and mercy for the believers...   " <span>- Surah Al-Isra (17:82)</span></p>
@@ -470,6 +467,6 @@
     </div>
 </footer>
 
-    <script src="././sham.js"></script>
+    <script src="sham.js"></script>
 </body>
 </html>
