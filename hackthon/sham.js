@@ -110,22 +110,82 @@ angryHadith: "\"The strong is not the one who overcomes the people by his streng
     }
 };
 
-
 // Audio files for each mood with exact verse timestamps
 const audioFiles = {
-    sad: 
-        "https://everyayah.com/data/Alafasy_128kbps/035034.mp3",  // Fatir 35:34 
-        
-        
-    
+    sad: "https://everyayah.com/data/Alafasy_128kbps/035034.mp3",  // Fatir 35:34 
     anxious: "https://everyayah.com/data/Alafasy_128kbps/013028.mp3", // Exact verse: Ar-Ra'd 13:28
     happy: "https://everyayah.com/data/Alafasy_128kbps/010058.mp3", // Exact verse: Yunus 10:58
     angry: "https://everyayah.com/data/Alafasy_128kbps/003134.mp3", // Exact verse: Ali 'Imran 3:134
     grateful:
-        "https://everyayah.com/data/Alafasy_128kbps/016018.mp3" , // An-Nahl 16:18
-       
-    
+        "https://everyayah.com/data/Alafasy_128kbps/016018.mp3" , // An-Nahl 16:18  
 };
+    // Team members data with English and Arabic versions
+    const teamMembersData = {
+        en: [
+            { 
+                name: "Hanan Ali",
+                role: "HTML & CSS Developer",
+                photo: "./Assets/photo_4_2025-11-30_12-56-40.jpg",
+                bio: "Builds clean, accessible HTML and CSS so pages work well on different devices. Writes simple, maintainable HTML/CSS and helps turn designs into working pages."
+            },
+            {
+                name: "Semira Oumer",
+                role: "HTML & CSS Developer",
+                photo: "./Assets/photo_2_2025-11-30_12-56-40.jpg",
+                bio: "Coordinates front-end tasks, ensures consistent design and quality across the project, and supports team collaboration, testing, and documentation."
+            },
+            {
+                name: "Liya Mehamed",
+                role: "Project Manager,CSS and JavaScript Developer",
+                photo: "./Assets/photo_1_2025-11-30_12-56-40.jpg",
+                bio: "Leads the project and implements responsive, accessible layouts and polished UI interactions using modern CSS and modular JavaScript; focuses on reusable components, smooth animations, and inclusive UX."
+            },
+            {
+                name: "Hanan Asmare",
+                role: "CSS and JavaScript Developer",
+                photo: "./Assets/photo_3_2025-11-30_12-56-40.jpg",
+                bio: "Designs intuitive, responsive interfaces and implements interactive features with clean, maintainable JavaScript and CSS to enhance usability and accessibility."
+            },
+            {
+                name: "Zahara Sultan",
+                role: "CSS & JavaScript Developer",
+                photo: "./Assets/photo_5_2025-11-30_12-56-40.jpg",
+                bio: "Creates engaging, user-friendly web experiences by combining modern CSS techniques with efficient JavaScript to build dynamic, responsive interfaces."
+            }
+        ],
+        ar: [
+            { 
+                name: "حنان علي",
+                role: "مطوّر HTML و CSS",
+                photo: "./Assets/photo_4_2025-11-30_12-56-40.jpg",
+                bio: "يبني HTML و CSS نظيفين ومتوافقين مع الأجهزة المختلفة. يكتب شيفرة صالحة وسهلة الصيانة ويساعد في تحويل التصاميم إلى صفحات عمل."
+            },
+            {
+                name: "سميرة عمر",
+                role: "مطوّرة HTML و CSS",
+                photo: "./Assets/photo_2_2025-11-30_12-56-40.jpg",
+                bio: "تنسق مهام الواجهة الأمامية، وتضمن تناسق التصميم وجودته عبر المشروع، وتدعم التعاون والاختبار والتوثيق."
+            },
+            {
+                name: "ليا محمد",
+                role: "مطوّرة CSS وجافا سكريبت ومديرة مشاريع ",
+                photo: "./Assets/photo_1_2025-11-30_12-56-40.jpg",
+                bio: "تنفّذ تنسيقات متجاوبة وقابلة للوصول وتبني تفاعلات واجهة أنيقة باستخدام CSS حديثة وجافاسكربت مُنظّم. تبني مكونات قابلة لإعادة الاستخدام وحركات وانخفاضيات حدثية."
+            },
+            {
+                name: "حنان أسماري",
+                role: "مطوّرة CSS وجافاسكربت",
+                photo: "./Assets/photo_3_2025-11-30_12-56-40.jpg",
+                bio: "تصمم واجهات بديهية ومتجاوبة وتنفّذ ميزات تفاعلية بشيفرة نظيفة وقابلة للصيانة لتعزيز قابلية الاستخدام وإمكانية الوصول."
+            },
+            {
+                name: "زهرة سلطان",
+                role: "مطوّرة CSS وجافاسكربت",
+                photo: "./Assets/photo_5_2025-11-30_12-56-40.jpg",
+                bio: "تبتكر تجارب ويب جذابة وسهلة الاستخدام عبر دمج تقنيات CSS الحديثة مع جافاسكربت فعّال لبناء واجهات ديناميكية ومتجاوبة."
+            }
+        ]
+    };
 
 // Current language
 let currentLang = 'en';
@@ -139,6 +199,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Initialize the app
         initializeApp();
+        updateTeamMembers();
     }, 2500);
 });
 
@@ -234,7 +295,11 @@ function updateMoodPageContent(mood) {
     if (translationElement) {
         translationElement.textContent = texts[`${mood}Translation`];
     }
-    
+     // Update second translation for sad and grateful
+    const translationElement2 = document.getElementById(`${mood}-translation2`);
+    if (translationElement2 && texts[`${mood}Translation2`]) {
+        translationElement2.textContent = texts[`${mood}Translation2`];
+    }
     // Update description
     const descriptionElement = document.getElementById(`${mood}-description`);
     if (descriptionElement) {
@@ -247,8 +312,6 @@ function updateMoodPageContent(mood) {
         hadithElement.textContent = texts[`${mood}Hadith`];
     }
 }
-
-
 // Update audio source to match the exact verse
 function updateAudioSource(mood) {
     const audioPlayer = document.querySelector(`#${mood}-page .ayah-audio`);
@@ -263,7 +326,33 @@ function updateAudioSource(mood) {
         }
     }
 }
-
+// update team members based on language
+function updateTeamMembers() {
+    const teamContainer = document.getElementById('teamContainer');
+    if (!teamContainer) return;
+    
+    // Clear current team
+    teamContainer.innerHTML = '';
+    
+    // Get team data for current language
+    const teamMembers = teamMembersData[currentLang] || teamMembersData.en;
+ // Create and add team member cards
+    teamMembers.forEach(member => {
+        const memberCard = document.createElement('div');
+        memberCard.className = 'team-member';
+        
+        memberCard.innerHTML = `
+            <img src="${member.photo}" alt="${member.name}" class="member-photo">
+            <div class="member-info">
+                <h3 class="member-name">${member.name}</h3>
+                <p class="member-role">${member.role}</p>
+                <p class="member-bio">${member.bio}</p>
+            </div>
+        `;
+        
+        teamContainer.appendChild(memberCard);
+    });
+}
 // Change language function
 function changeLanguage(lang) {
     currentLang = lang;
@@ -331,137 +420,8 @@ function changeLanguage(lang) {
         document.querySelectorAll('.ayah-header').forEach(header => {
             header.style.flexDirection = 'row';
         });
-    } document.addEventListener('DOMContentLoaded', function() {
-    // Team member data
-    // Team members data with English and Arabic versions
-    const teamMembersData = {
-        en: [
-            { 
-                name: "Hanan Ali",
-                role: "HTML & CSS Developer",
-                photo: "./Assets/photo_4_2025-11-30_12-56-40.jpg",
-                bio: "Builds clean, accessible HTML and CSS so pages work well on different devices. Writes simple, maintainable HTML/CSS and helps turn designs into working pages."
-            },
-            {
-                name: "Semira Oumer",
-                role: "HTML & CSS Developer",
-                photo: "./Assets/photo_2_2025-11-30_12-56-40.jpg",
-                bio: "Coordinates front-end tasks, ensures consistent design and quality across the project, and supports team collaboration, testing, and documentation."
-            },
-            {
-                name: "Liya Mehamed",
-                role: "CSS and JavaScript Developer",
-                photo: "./Assets/photo_1_2025-11-30_12-56-40.jpg",
-                bio: "Implements responsive, accessible layouts and polished UI interactions using modern CSS and modular JavaScript. Builds reusable components, animations, and event-driven behaviors."
-            },
-            {
-                name: "Hanan Asmare",
-                role: "CSS and JavaScript Developer",
-                photo: "./Assets/photo_3_2025-11-30_12-56-40.jpg",
-                bio: "Designs intuitive, responsive interfaces and implements interactive features with clean, maintainable JavaScript and CSS to enhance usability and accessibility."
-            },
-            {
-                name: "Zahara Sultan",
-                role: "CSS & JavaScript Developer",
-                photo: "./Assets/photo_5_2025-11-30_12-56-40.jpg",
-                bio: "Creates engaging, user-friendly web experiences by combining modern CSS techniques with efficient JavaScript to build dynamic, responsive interfaces."
-            }
-        ],
-        ar: [
-            { 
-                name: "حنان علي",
-                role: "مطوّر HTML و CSS",
-                photo: "./Assets/photo_4_2025-11-30_12-56-40.jpg",
-                bio: "يبني HTML و CSS نظيفين ومتوافقين مع الأجهزة المختلفة. يكتب شيفرة صالحة وسهلة الصيانة ويساعد في تحويل التصاميم إلى صفحات عمل."
-            },
-            {
-                name: "سميرة عمر",
-                role: "مطوّرة HTML و CSS",
-                photo: "./Assets/photo_2_2025-11-30_12-56-40.jpg",
-                bio: "تنسق مهام الواجهة الأمامية، وتضمن تناسق التصميم وجودته عبر المشروع، وتدعم التعاون والاختبار والتوثيق."
-            },
-            {
-                name: "ليا محمد",
-                role: "مطوّرة CSS وجافاسكربت",
-                photo: "./Assets/photo_1_2025-11-30_12-56-40.jpg",
-                bio: "تنفّذ تنسيقات متجاوبة وقابلة للوصول وتبني تفاعلات واجهة أنيقة باستخدام CSS حديثة وجافاسكربت مُنظّم. تبني مكونات قابلة لإعادة الاستخدام وحركات وانخفاضيات حدثية."
-            },
-            {
-                name: "حنان أسماري",
-                role: "مطوّرة CSS وجافاسكربت",
-                photo: "./Assets/photo_3_2025-11-30_12-56-40.jpg",
-                bio: "تصمم واجهات بديهية ومتجاوبة وتنفّذ ميزات تفاعلية بشيفرة نظيفة وقابلة للصيانة لتعزيز قابلية الاستخدام وإمكانية الوصول."
-            },
-            {
-                name: "زهرة سلطان",
-                role: "مطوّرة CSS وجافاسكربت",
-                photo: "./Assets/photo_5_2025-11-30_12-56-40.jpg",
-                bio: "تبتكر تجارب ويب جذابة وسهلة الاستخدام عبر دمج تقنيات CSS الحديثة مع جافاسكربت فعّال لبناء واجهات ديناميكية ومتجاوبة."
-            }
-        ]
-    };
-
-    // Start with the current language's team members
-    let teamMembers = teamMembersData[currentLang] || teamMembersData.en;
-
-    // Get the container element (single declaration)
-    const teamContainer = document.getElementById('teamContainer');
-
-    // Re-render team members when language changes (the createTeamMemberCard function is defined below)
-    const languageSelectElem = document.getElementById('language-select');
-    if (languageSelectElem) {
-        languageSelectElem.addEventListener('change', function() {
-            const selectedLanguage = this.value;
-
-            // Keep global language state in sync
-            if (typeof changeLanguage === 'function') {
-                changeLanguage(selectedLanguage);
-            } else {
-                // fallback update of teamMembers if changeLanguage isn't available
-                teamMembers = teamMembersData[selectedLanguage] || teamMembersData.en;
-            }
-
-            // update the reference to the appropriate language dataset
-            teamMembers = teamMembersData[selectedLanguage] || teamMembersData.en;
-
-            // If team container and factory exist, re-render immediately
-            if (teamContainer) {
-                teamContainer.innerHTML = '';
-                // createTeamMemberCard will be available by the time user toggles language
-                if (typeof createTeamMemberCard === 'function') {
-                    teamMembers.forEach(member => {
-                        const memberCard = createTeamMemberCard(member);
-                        teamContainer.appendChild(memberCard);
-                    });
-                }
-            }
-        });
-    }
-
-    // Function to create team member cards
-    function createTeamMemberCard(member) {
-        const memberCard = document.createElement('div');
-        memberCard.className = 'team-member';
-        
-        memberCard.innerHTML = `
-            <img src="${member.photo}" alt="${member.name}" class="member-photo">
-            <div class="member-info">
-                <h3 class="member-name">${member.name}</h3>
-                <p class="member-role">${member.role}</p>
-                <p class="member-bio">${member.bio}</p>
-            </div>
-        `;
-        
-        return memberCard;
-    }
-
-    // Add team members to the page (guarded)
-    if (teamContainer && Array.isArray(teamMembers)) {
-        teamMembers.forEach(member => {
-            const memberCard = createTeamMemberCard(member);
-            teamContainer.appendChild(memberCard);
-        });
-    }
-});
-
+    } 
+     // Update team members when language changes
+    updateTeamMembers();
 }
+    
