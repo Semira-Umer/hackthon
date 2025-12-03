@@ -147,5 +147,7 @@ May Allah reward every contributor and every user.
 ---
 
 © 2025 – Quran Mood Matcher
+
  Team- Muslimah Coders.
+ 
 Built with faith, purpose, and code.
