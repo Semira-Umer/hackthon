@@ -46,7 +46,7 @@ Quran Mood Matcher was built during a hackathon using **HTML**, **CSS**, and **J
 | ----------------- | -------------------------- | ------------------------------------------------- |
 | **Hanan Ali**     | HTML & CSS Developer       | Crafts clean and accessible web pages.            |
 | **Semira Oumer**  | HTML & CSS Developer       | Ensures visual consistency and structure.         |
-| **Liya Mehamed**  | CSS & JavaScript Developer | Builds responsive layouts & dynamic UI features.  |
+| **Liya Mehamed**  | Project Manager,CSS & JavaScript Developer | Builds responsive layouts & dynamic UI features.  |
 | **Hanan Asmare**  | CSS & JavaScript Developer | Creates user-friendly and interactive components. |
 | **Zahara Sultan** | CSS & JavaScript Developer | Enhances usability with modern CSS & JS.          |
 
@@ -122,6 +122,10 @@ Understanding how Islamic teachings guide emotional wellness
 Appreciating how technology can support spiritual growth
 
 This project strengthened both our technical capabilities and our connection to the Quran.
+
+Try it live 🚀
+
+Demo](https://your-demo-link.com)
 
  🤲 Final Message
 
