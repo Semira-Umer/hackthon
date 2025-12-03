@@ -390,6 +390,23 @@ function changeLanguage(lang) {
         li.innerHTML = `<i class="fas fa-check"></i> ${feature}`;
         featuresList.appendChild(li);
     });
+// UPDATE FEATURE ITEMS
+    const featureItems = document.querySelectorAll('.feature-item span');
+    if (lang === 'ar') {
+        // Arabic translations for feature items
+        if (featureItems.length >= 3) {
+            featureItems[0].textContent = "آيات قرآنية";
+            featureItems[1].textContent = "توجيه من الحديث";
+            featureItems[2].textContent = "تلاوة صوتية";
+        }
+    } else {
+        // English translations for feature items
+        if (featureItems.length >= 3) {
+            featureItems[0].textContent = "Quranic Verses";
+            featureItems[1].textContent = "Hadith Guidance";
+            featureItems[2].textContent = "Audio Recitation";
+        }
+    }
     
     // Update mood page content if we're on a mood page
     const currentMoodPage = document.querySelector('.mood-page[style*="display: block"]');
