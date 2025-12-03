@@ -135,7 +135,7 @@ This project strengthened both our technical capabilities and our connection to 
 
 Try it live 🚀
 
-Demo (https://quran-mood-matcher.netlify.app/)
+Demo (https://quran-mood-matcher-website.netlify.app/)
 
 ---
 
